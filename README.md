@@ -1,4 +1,4 @@
-<h1>Brasileirão ⚽️</h1> 
+# Brasileirão ⚽️
 
 
 ## 📑 Índice
@@ -30,7 +30,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
     <td>Desktop</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/igorjcl/proffy/blob/master/.github/web.gif"/></td>
+    <td><img src="https://github.com/igorjcl/brasileirao/blob/master/.github/web.gif"/></td>
   </tr>
 </table>
 
