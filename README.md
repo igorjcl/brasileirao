@@ -1,32 +1,50 @@
-# :soccer: Brasileirão API
+<h1>Brasileirão ⚽️</h1> 
 
-Brasileirão API é uma API para consulta da tabela do campeonato brasileiro.
 
-<br>
+## 📑 Índice
 
----
+- [📑 Índice](#-índice)
+- [💡 Sobre o Projeto](#-sobre-o-projeto)
+- [🚀 Tecnologias utilizadas](#-tecnologias-utilizadas)
+- [🎨 Design](#-design)
+- [📥 Executar o projeto](#-executar-o-projeto)
+- [📕 Licença](#-licença)
 
-## :hammer: Como executar o projeto
+## 💡 Sobre o Projeto
 
-```bash
-# Clonar o repositório
-$ git clone https://github.com/igorjcl/brasileirao-api.git
+Brasileirão é uma aplicação para consulta da tabela do campeonato brasileiro.
 
-# Entrar no diretório
-$ cd brasileirao-api
+## 🚀 Tecnologias utilizadas
 
-# Baixar as dependências
-$ yarn install
+O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-# Executar o servidor
-$ yarn start
-```
-<p align="center">
-Feito isso, abra o seu navegador e acesse http://localhost:3000/
-<p>
+- ReactJS
+- HTML5 e CSS3
+- NodeJS
+- Cheerio
 
----
+## 🎨 Design
 
-## :pencil: Licença
+<table>
+  <tr>
+    <td>Desktop</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/igorjcl/proffy/blob/master/.github/web.gif"/></td>
+  </tr>
+</table>
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+## 📥 Executar o projeto
+
+- Clone o Repositório: `git clone https://github.com/igorjcl/brasileirao.git`
+
+Ir para a pasta 'web' para rodar o front-end, ou ir para pasta 'server' para rodar o back-end:
+
+- Instalar dependências: `yarn install`
+- Rodar Aplicação: `yarn start`
+
+
+## 📕 Licença
+
+Todos os arquivos incluídos aqui, estão sob [Licença MIT](./LICENSE).
