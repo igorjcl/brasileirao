@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
+:root {
+  font-size: 60%;
+  --color-background: #f9f9f9;
+  --color-black: #080708;
+  --color-white: #ffffff;
+  --color-first-position: #81b910;
+  --color-midle: #3772ff;
+  --color-last-position: #df2935;
+  --color-opac: #656365;
+  --gradient: linear-gradient(
+    to right bottom,
+    #81b910,
+    #6cb627,
+    #57b237,
+    #40ae44,
+    #22a94f
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--color-background);
+  font-family: "Poppins", sans-serif;
+  color: var(--color-black);
+}
+
+.container {
+  height: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  :root {
+    font-size: 62.5%;
+  }
+}
