@@ -3,9 +3,7 @@
   <br>
 </h1>
 
-<h2 align="center">
-  📑 Índice
-</h2>
+<br />
 
 <p align="center">
   <a href="#-sobre-o-projeto">💡 Sobre o Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
