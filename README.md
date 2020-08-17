@@ -1,14 +1,21 @@
-# Brasileirão ⚽️
+<h1 align="center">
+  ⚽️ Brasileirão
+  <br>
+</h1>
 
+<h2 align="center">
+  📑 Índice
+</h2>
 
-## 📑 Índice
+<p align="center">
+  <a href="#-sobre-o-projeto">💡 Sobre o Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias-utilizadas">🚀 Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-design">🎨 Design</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-executar-o-projeto">📥 Executar o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-licença"> 📕Licença</a>
+</p>
 
-- [📑 Índice](#-índice)
-- [💡 Sobre o Projeto](#-sobre-o-projeto)
-- [🚀 Tecnologias utilizadas](#-tecnologias-utilizadas)
-- [🎨 Design](#-design)
-- [📥 Executar o projeto](#-executar-o-projeto)
-- [📕 Licença](#-licença)
+---
 
 ## 💡 Sobre o Projeto
 
@@ -34,7 +41,6 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
   </tr>
 </table>
 
-
 ## 📥 Executar o projeto
 
 - Clone o Repositório: `git clone https://github.com/igorjcl/brasileirao.git`
@@ -43,7 +49,6 @@ Ir para a pasta 'web' para rodar o front-end, ou ir para pasta 'server' para rod
 
 - Instalar dependências: `yarn install`
 - Rodar Aplicação: `yarn start`
-
 
 ## 📕 Licença
 
