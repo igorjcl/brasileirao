@@ -12,7 +12,7 @@ const getSerieATable = async () => {
 
   let times = [];
 
-  $($("body").find("table"))
+  $($("body").find("table")[0])
     .find("tbody > tr")
     .each((index, tr) => {
       const position = $($(tr).find("td > b").eq(0)).text().split("º")[0];
@@ -21,6 +21,11 @@ const getSerieATable = async () => {
       const defeats = $($(tr).find("td").eq(4)).text();
       const victories = $($(tr).find("td").eq(2)).text();
       const imagePath = $($($(tr).find("td > img"))).attr("src");
+      const matches = $($(tr).find("td").eq(1)).text();
+      const tie = $($(tr).find("td").eq(3)).text();
+
+      console.log(matches);
+
       const time = {
         position,
         name,
@@ -28,7 +33,10 @@ const getSerieATable = async () => {
         defeats,
         victories,
         imagePath,
+        matches,
+        tie,
       };
+
       if (time.name) {
         times.push(time);
       }

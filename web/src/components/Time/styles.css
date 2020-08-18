@@ -1,6 +1,11 @@
+.wrapper {
+  width: 100%;
+  background-color: red;
+}
+
 .card {
   background-color: var(--color-white);
-  margin: 1.5rem 0;
+  margin-top: 1rem;
   display: flex;
   flex-direction: row;
   border-radius: 1rem;
@@ -19,7 +24,7 @@
 
 .card > .image {
   box-shadow: 27px 0px 35px 1px rgb(241, 241, 241);
-  padding: 2rem 3rem;
+  padding: 2rem 1.5rem;
   display: grid;
   place-content: center;
 }
@@ -32,13 +37,13 @@
 .info {
   display: flex;
   flex-direction: row;
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
   width: 100%;
   justify-content: space-between;
 }
 
-.info {
-  line-height: 1.5rem;
+.info h2 {
+  font-size: 1.7rem;
 }
 
 .points {
@@ -69,11 +74,42 @@
 }
 
 .position {
-  margin-left: 2rem;
   display: grid;
   place-content: center;
 }
 
 .position h2 {
-  font-size: 4rem;
+  font-size: 3rem;
+}
+
+.matches {
+  background-color: var(--color-first-position-dark);
+  width: 100%;
+
+}
+
+@media (min-width: 700px) {
+  .card {
+    margin: 1.5rem 0;
+  }
+
+  .card > .image {
+    padding: 2rem 3rem;
+  }
+
+  .info {
+    padding: 1.5rem;
+  }
+
+  .info {
+    line-height: 1.5rem;
+  }
+
+  .points {
+    margin-top: 1.5rem;
+  }
+
+  .position h2 {
+    font-size: 4rem;
+  }
 }

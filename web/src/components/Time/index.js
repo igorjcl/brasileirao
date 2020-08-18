@@ -2,7 +2,16 @@ import React from "react";
 
 import "./styles.css";
 
-const Time = ({ position, name, points, defeats, victories, imagePath }) => {
+const Time = ({
+  position,
+  name,
+  points,
+  defeats,
+  victories,
+  imagePath,
+  matches,
+  tie,
+}) => {
   return (
     <div
       className={`card ${
@@ -20,10 +29,21 @@ const Time = ({ position, name, points, defeats, victories, imagePath }) => {
               <p>{points || "-"}</p>
               <p>Pontos</p>
             </div>
+
+            <div className="point">
+              <p>{matches || "-"}</p>
+              <p>Jogos</p>
+            </div>
+
             <div className="point">
               <p>{victories || "-"}</p>
               <p>Vitorias</p>
             </div>
+            <div className="point">
+              <p>{tie || "-"}</p>
+              <p>Empates</p>
+            </div>
+
             <div className="point">
               <p>{defeats || "-"}</p>
               <p>Derrotas</p>

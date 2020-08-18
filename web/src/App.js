@@ -37,7 +37,16 @@ function App() {
         ) : (
           times.map(
             (
-              { position, name, points, defeats, victories, imagePath },
+              {
+                position,
+                name,
+                points,
+                defeats,
+                victories,
+                imagePath,
+                matches,
+                tie,
+              },
               index
             ) => (
               <Time
@@ -48,6 +57,8 @@ function App() {
                 defeats={defeats}
                 victories={victories}
                 imagePath={imagePath}
+                matches={matches}
+                tie={tie}
               />
             )
           )
