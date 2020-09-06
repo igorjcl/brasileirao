@@ -1,71 +1,54 @@
 import React, { useState, useEffect } from "react";
-import { css } from "@emotion/core";
 import BeatLoader from "react-spinners/BeatLoader";
 import { api } from "./service/api";
 
-import Header from "./components/Header";
-import Time from "./components/Time";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import { ListaConfrontosHoje } from './components/ListaConfrontosHoje';
+import Time from  "./components/Time";
 
 import "./global.css";
 
 function App() {
   const [times, setTimes] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loadingTable, setLoadingTable] = useState(false);
+  const [loadingResults, setLoadingResults] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await api.get();
+      const { data } = await api.get('/tabela');
 
       setTimes(data);
-      setLoading(false);
+      setLoadingTable(true);
     };
     fetchData();
   }, []);
 
+  const enableLoadingResults = () => setLoadingResults(true)
+
   return (
     <>
-      <Header />
-      <div className="container">
-        {loading ? (
-          <BeatLoader
-            size={15}
-            color={"#81b910"}
-            css={css`
-              margin-top: 50%;
-            `}
-          />
+      {
+        !loadingTable && !loadingResults ? (
+          <div className="loading">
+            <BeatLoader
+              size={20}
+              color={"#fff"}
+            />
+          </div>
         ) : (
-          times.map(
-            (
-              {
-                position,
-                name,
-                points,
-                defeats,
-                victories,
-                imagePath,
-                matches,
-                tie,
-              },
-              index
-            ) => (
-              <Time
-                key={index}
-                name={name}
-                position={position}
-                points={points}
-                defeats={defeats}
-                victories={victories}
-                imagePath={imagePath}
-                matches={matches}
-                tie={tie}
-              />
-            )
-          )
-        )}
-      </div>
+          <div className="grid">
+            <Header />
+            <ListaConfrontosHoje enableLoadingResults={enableLoadingResults} />
+            <div className="container">
+              { times.map((time, index) => <Time key={index} {...time} />) }
+            </div>
+            <Footer />
+          </div>
+        )
+      }
     </>
-  );
+  )
 }
 
 export default App;

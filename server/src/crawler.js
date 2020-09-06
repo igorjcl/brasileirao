@@ -6,7 +6,7 @@ const urlBase =
 
 const fetchData = async (url) => await axios.get(url);
 
-const getSerieATable = async () => {
+module.exports.getSerieATable = async () => {
   const { data } = await fetchData(urlBase);
   const $ = cheerio.load(data);
 
@@ -23,8 +23,6 @@ const getSerieATable = async () => {
       const imagePath = $($($(tr).find("td > img"))).attr("src");
       const matches = $($(tr).find("td").eq(1)).text();
       const tie = $($(tr).find("td").eq(3)).text();
-
-      console.log(matches);
 
       const time = {
         position,
@@ -44,4 +42,23 @@ const getSerieATable = async () => {
   return times;
 };
 
-module.exports = getSerieATable;
+module.exports.getConfrontationToday = async () => {
+  const { data } = await fetchData(urlBase);
+  const $ = cheerio.load(data);
+
+  let confrontatio = [];
+  $($('body').find('.aside-rodadas .swiper-wrapper > .active > .aside-content ul li')).each((i, e) => {
+    const home_team = $($($(e).find('li div').eq(1)).find('a > .pull-left > img')).attr("src");
+    const visited_team = $($($(e).find('li div').eq(1)).find('a > .pull-right > img')).attr("src");
+    const result = $($($(e).find('li div').eq(1)).find('a > .partida-horario').eq(0)).text().trim();
+    
+    confrontatio.push({
+      home_team,
+      visited_team,
+      result
+    })
+  })
+
+  return confrontatio;
+}
+

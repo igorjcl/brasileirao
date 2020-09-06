@@ -1,0 +1,27 @@
+.lista-confrontos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  transform: translateY(-45%);
+}
+
+@media screen and (min-width: 425px) {
+  .lista-confrontos {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .lista-confrontos {
+    max-width: 765px;
+  }
+}
+
+@media screen and (min-width: 1024) {
+  .lista-confrontos {
+    max-width: 900px;
+  }
+}
